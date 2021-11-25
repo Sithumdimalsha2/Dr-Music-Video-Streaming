@@ -8,8 +8,8 @@
         "video stream"
     ],
     "website": "https://t.me/Dr_Asad_Ali",
-    "repository": "https://github.com/jankarikiduniya/Rocks-Video-Streaming",
-    "success_url": "https://t.me/Give_Me_Heart"",
+    "repository": "https://github.com/jankarikiduniya/Dr-Music-Video-Streaming",
+    "success_url": "https://t.me/Give_Me_Heart",
     "env": {
         "API_ID": {
             "description": "your API_ID from my.telegram.org",
