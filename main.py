@@ -4,26 +4,19 @@
 # Owner Asad + Harshit
 
 
-import requests
-from pyrogram import idle
-from pyrogram import Client as Bot
+import asyncio
+from pytgcalls import idle
+from rocksdriver.asad import call_py, bot
 
-from Client.callsmusic import run
-from config import API_ID, API_HASH, BOT_TOKEN, BG_IMAGE
+async def mulai_bot():
+    print("[ASAD]: STARTING BOT CLIENT")
+    await bot.start()
+    print("[ASAD]: STARTING PYTGCALLS CLIENT")
+    await call_py.start()
+    await idle()
+    await pidle()
+    print("[ASAD]: STOPPING BOT & USERBOT")
+    await bot.stop()
 
-response = requests.get(BG_IMAGE)
-with open("./etc/foreground.png", "wb") as file:
-    file.write(response.content)
-
-
-bot = Bot(
-    ":memory:",
-    API_ID,
-    API_HASH,
-    bot_token=BOT_TOKEN,
-    plugins=dict(root="plugins")
-)
-
-bot.start()
-run()
-idle() 
+loop = asyncio.get_event_loop()
+loop.run_until_complete(mulai_bot())
