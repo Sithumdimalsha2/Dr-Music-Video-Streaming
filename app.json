@@ -1,11 +1,12 @@
 {
-    "name": "Dr Music Streaming Bot",
-    "description": "Dr Music Video Review Telegram Bot For Streaming Video & Music Trought The Telegram Group Video Chat, Powered By Pytgcalls And Pyrogram",
+    "name": "Dr Music Only Video Stream Bot",
+    "description": "Telegram bot for Streaming Video trought the Telegram Group Video Chat, powered by pytgcalls and pyrogram",
     "logo": "https://telegra.ph/file/336e006861a2667a7663f.jpg",
     "keywords": [
         "pytgcalls",
         "telegram bot",
-        "video stream"
+        "video stream",
+        "pyrogram"
     ],
     "website": "https://t.me/Dr_Asad_Ali",
     "repository": "https://github.com/jankarikiduniya/Dr-Music-Video-Streaming",
@@ -36,33 +37,32 @@
             "required": true
         },
         "SESSION_NAME": {
-            "description": "fill with the pyrogram String Session generate from here @Pyrogram_String_Bot",
+            "description": "fill with the pyrogram String Session",
             "required": true
         },
         "SUDO_USERS": {
             "description": "list of user ids to be added to sudo member list, or just fill with your id",
             "required": true
-            "value": "1342820594"
         },
         "GROUP_SUPPORT": {
             "description": "if you have group, then fill the group username here without @",
             "required": true,
-            "value": "Shayri_Music_Lovers"
+            "value": "VeezSupportGroup"
         },
         "UPDATES_CHANNEL": {
             "description": "if you have channel, then fill the channel username here without @",
             "required": true,
-            "value": "Give_Me_Heart"
+            "value": "levinachannel"
         },
         "OWNER_NAME": {
             "description": "fill with your telegram account username without @",
             "required": true,
-            "value": "Dr_Asad_Ali"
+            "value": "dlwrml"
         },
         "ALIVE_NAME": {
             "description": "fill with your telegram account nickname/name",
             "required": true,
-            "value": "Give_Me_Heart"
+            "value": "Levina"
         }
     },
     "addons": [],
