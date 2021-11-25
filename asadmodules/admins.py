@@ -193,8 +193,7 @@ async def change_volume(client, m: Message):
         try:
             await call_py.change_volume_call(chat_id, volume=int(range))
             await m.reply
-                f"✅ **Vᴏʟᴜᴍᴇ sᴇᴛ ᴛᴏ** `{range}`%"
-            )
+                f"✅ **Vᴏʟᴜᴍᴇ sᴇᴛ ᴛᴏ** `{range}`%")
         except Exception as e:
             await m.reply(f"🚫 **Eʀʀᴏʀ:**\n\n`{e}`")
     else:
