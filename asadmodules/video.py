@@ -1,7 +1,10 @@
+# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
+# Without Credit (Mother Fucker)
+# Rocks © @Dr_Asad_Ali © Rocks
+# Owner Asad + Harshit
 
-
-import asyncio
 import re
+import asyncio
 
 from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, GROUP_SUPPORT
 from rocksdriver.filters import command, other_filters
@@ -55,27 +58,27 @@ async def ytdl(link):
 
 
 @Client.on_message(command(["vplay", f"vplay@{BOT_USERNAME}"]) & other_filters)
-async def vplay(_, m: Message):
-
+async def vplay(c: Client, m: Message):
+    replied = m.reply_to_message
+    chat_id = m.chat.id
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ʜᴇᴀʀᴛ", url=f"https://t.me/Give_Me_Heart"),
-                    InlineKeyboardButton("👑 ᴏᴡɴᴇʀ", url=f"https://t.me/Dr_Asad_Ali"),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👨‍👧‍👦", url=f"https://t.me/{GROUP_SUPPORT}"
-                    )
-                ],
+                InlineKeyboardButton(
+                        "❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Dr_Asad_Ali"
+                ),
+                InlineKeyboardButton(
+                        "👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/{GROUP_SUPPORT}"
+                ),
             ]
-        )
+        ]
+    )
     if m.sender_chat:
         return await m.reply_text("**ʏᴏᴜ'ʀᴇ ᴀɴ __Aɴᴏɴʏᴍᴏᴜs Aᴅᴍɪɴ__ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.**")
     try:
         aing = await c.get_me()
     except Exception as e:
-        return await m.reply_text(f"**ᴇʀʀᴏʀ**:\n\n{e}")
+        return await m.reply_text(f"**Eʀʀᴏʀ**:\n\n{e}")
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
@@ -127,7 +130,7 @@ async def vplay(_, m: Message):
 
     if replied:
         if replied.video or replied.document:
-            loser = await replied.reply("📥 **Dᴏᴡɴʟᴏᴀᴅɪɴɢ ᴠɪᴅᴇᴏ...[ʀᴏᴄᴋs sᴇʀᴠᴇʀ](t.me/Shayri_Music_Lovers)**")
+            loser = await replied.reply("📥 **𝕯𝖔𝖜𝖓𝖑𝖔𝖆𝖉𝖎𝖓𝖌 𝖛𝖎𝖉𝖊𝖔...**")
             dl = await replied.download()
             link = replied.link
             if len(m.command) < 2:
@@ -172,7 +175,7 @@ async def vplay(_, m: Message):
                     amaze = MediumQualityVideo()
                 elif Q == 360:
                     amaze = LowQualityVideo()
-                await loser.edit("🔄 **Jᴏɪɴɪɴɢ ᴠᴄ...**")
+                await loser.edit("🔄 **Joining vc...**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioVideoPiped(
@@ -203,19 +206,19 @@ async def vplay(_, m: Message):
                     "**» ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴠɪᴅᴇᴏ ғɪʟᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴏ sᴇᴀʀᴄʜ.**"
                 )
             else:
-                loser = await c.send_message(chat_id, "🔎 **Sᴇᴀʀᴄʜɪɴɢ...**")
+                loser = await c.send_message(chat_id, "🔎 **𝕾𝖊𝖆𝖗𝖈𝖍𝖎𝖓𝖌...**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 Q = 720
                 amaze = HighQualityVideo()
                 if search == 0:
-                    await loser.edit("❌ **ɴᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ...**")
+                    await loser.edit("❌ **ɴᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ.**")
                 else:
                     songname = search[0]
                     url = search[1]
                     veez, ytlink = await ytdl(url)
                     if veez == 0:
-                        await loser.edit(f"❌** yt-dl ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ**\n\n» `{ytlink}`")
+                        await loser.edit(f"❌ yt-dl **ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ**\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
                             pos = add_to_queue(
@@ -237,7 +240,7 @@ async def vplay(_, m: Message):
     )
                         else:
                             try:
-                                await loser.edit("🔄 **Jᴏɪɴɪɴɢ ᴠᴄ...**")
+                                await loser.edit("🔄 **𝕵𝖔𝖎𝖓𝖎𝖓𝖌 vc...**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioVideoPiped(
@@ -245,7 +248,7 @@ async def vplay(_, m: Message):
                                         HighQualityAudio(),
                                         amaze,
                                     ),
-                                    stream_type=StreamType().pulse_stream,
+                                    stream_type=StreamType().local_stream,
                                 )
                                 add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                                 await loser.delete()
@@ -264,7 +267,7 @@ async def vplay(_, m: Message):
     )
                             except Exception as ep:
                                 await loser.delete()
-                                await m.reply_text(f"🚫 *,*Eʀʀᴏʀ**: `{ep}`")
+                                await m.reply_text(f"🚫 error: `{ep}`")
 
     else:
         if len(m.command) < 2:
@@ -272,19 +275,19 @@ async def vplay(_, m: Message):
                     "**» ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ᴠɪᴅᴇᴏ ғɪʟᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴏ sᴇᴀʀᴄʜ.**"
                 )
         else:
-            loser = await c.send_message(chat_id, "🔎 **Sᴇᴀʀᴄʜɪɴɢ...**")
+            loser = await c.send_message(chat_id, "🔎 **𝕾𝖊𝖆𝖗𝖈𝖍𝖎𝖓𝖌...**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
             amaze = HighQualityVideo()
             if search == 0:
-                await loser.edit("❌ **ɴᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ...**")
+                await loser.edit("❌ **ɴᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ.**")
             else:
                 songname = search[0]
                 url = search[1]
                 veez, ytlink = await ytdl(url)
                 if veez == 0:
-                    await loser.edit(f"❌** yt-dl ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ**\n\n» `{ytlink}`")
+                    await loser.edit(f"❌ yt-dl **ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ**\n\n» `{ytlink}`")
                 else:
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
@@ -306,7 +309,7 @@ async def vplay(_, m: Message):
     )
                     else:
                         try:
-                            await loser.edit("🔄 **Jᴏɪɴɪɴɢ ᴠᴄ...**")
+                            await loser.edit("🔄 **𝕵𝖔𝖎𝖓𝖎𝖓𝖌 ᴠᴄ...**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioVideoPiped(
@@ -314,7 +317,7 @@ async def vplay(_, m: Message):
                                     HighQualityAudio(),
                                     amaze,
                                 ),
-                                stream_type=StreamType().pulse_stream,
+                                stream_type=StreamType().local_stream,
                             )
                             add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                             await loser.delete()
@@ -333,24 +336,25 @@ async def vplay(_, m: Message):
     )
                         except Exception as ep:
                             await loser.delete()
-                            await m.reply_text(f"🚫 **Eʀʀᴏʀ:** `{ep}`")
+                            await m.reply_text(f"🚫 **Eʀʀᴏʀ: `{ep}`")
 
 
 @Client.on_message(command(["vstream", f"vstream@{BOT_USERNAME}"]) & other_filters)
-async def vstream(_, m: Message):
+async def vstream(c: Client, m: Message):
+    m.reply_to_message
+    chat_id = m.chat.id
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("❤️ ʜᴇᴀʀᴛ", url=f"https://t.me/Give_Me_Heart"),
-                    InlineKeyboardButton("👑 ᴏᴡɴᴇʀ", url=f"https://t.me/Dr_Asad_Ali"),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👨‍👧‍👦", url=f"https://t.me/{GROUP_SUPPORT}"
-                    )
-                ],
+                InlineKeyboardButton(
+                        "❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Dr_Asad_Ali"
+                ),
+                InlineKeyboardButton(
+                        "👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦", url=f"https://t.me/{GROUP_SUPPORT}"
+                ),
             ]
-        )
+        ]
+    )
     if m.sender_chat:
          return await m.reply_text("**ʏᴏᴜ'ʀᴇ ᴀɴ __Aɴᴏɴʏᴍᴏᴜs Aᴅᴍɪɴ__ !\n\n» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғʀᴏᴍ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.**")
     try:
@@ -407,12 +411,12 @@ async def vstream(_, m: Message):
                 )
 
     if len(m.command) < 2:
-        await m.reply("**» ɢɪᴠᴇ ᴍᴇ ᴀ live-link/m3u8 ᴜʀʟ/ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴛᴏ sᴛʀᴇᴀᴍ.**")
+        await m.reply("» give me a live-link/m3u8 url/youtube link to stream.")
     else:
         if len(m.command) == 2:
             link = m.text.split(None, 1)[1]
             Q = 720
-            loser = await c.send_message(chat_id, "🔄 **Pʀᴏᴄᴇssɪɴɢ ssᴛʀᴇᴀᴍ...**")
+            loser = await c.send_message(chat_id, "🔄 **Pʀᴏᴄᴇssɪɴɢ sᴛʀᴇᴀᴍ...**")
         elif len(m.command) == 3:
             op = m.text.split(None, 1)[1]
             link = op.split(None, 1)[0]
@@ -424,20 +428,20 @@ async def vstream(_, m: Message):
                 await m.reply(
                     "**» __ᴏɴʟʏ 720, 480, 360 ᴀʟʟᴏᴡᴇᴅ__ **\n💡 **ɴᴏᴡ sᴛʀᴇᴀᴍɪɴɢ ᴠɪᴅᴇᴏ ɪɴ 720p**"
                 )
-            loser = await c.send_message(chat_id, "🔄 **Pʀᴏᴄᴇssɪɴɢ sᴛʀᴇᴀᴍ...**")
+            loser = await c.send_message(chat_id, "🔄 **processing stream...**")
         else:
             await m.reply("**/vstream {link} {720/480/360}**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
         if match:
-            veez, livelink = await ytdl(link)
+            asad, livelink = await ytdl(link)
         else:
             livelink = link
-            veez = 1
+            asad = 1
 
-        if veez == 0:
-            await loser.edit(f"❌** yt-dl ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ**\n\n» `{livelink}`")
+        if asad == 0:
+            await loser.edit(f"❌ yt-dl **ɪssᴜᴇs ᴅᴛᴇᴄᴛᴇᴅ**\n\n» `{livelink}`")
         else:
             if chat_id in QUEUE:
                 pos = add_to_queue(chat_id, "Live Stream", livelink, link, "Video", Q)
@@ -463,7 +467,7 @@ async def vstream(_, m: Message):
                 elif Q == 360:
                     amaze = LowQualityVideo()
                 try:
-                    await loser.edit("🔄 **Jᴏɪɴɪɴɢ ᴠᴄ...**")
+                    await loser.edit("🔄 **𝕵𝖔𝖎𝖓𝖎𝖓𝖌 vc...**")
                     await call_py.join_group_call(
                         chat_id,
                         AudioVideoPiped(

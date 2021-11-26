@@ -4,6 +4,11 @@
 # Owner Asad + Harshit
 # 💔༆ _🅡🅾 C⃤🅚🅢_ԹՏԹԺ ༄🇵🇰 【Usᴇʀ_ᴅɪᴇᴅ】
 
+
+
+
+
+
 from datetime import datetime
 from sys import version_info
 from time import time
@@ -16,8 +21,12 @@ from config import (
     GROUP_SUPPORT,
     OWNER_NAME,
     UPDATES_CHANNEL,
+    REPO_OWNER
+    MY_BRO,
+    MY_SERVER,
 )
 from asadmodules import __version__
+from rocksdriver.asad import user
 from rocksdriver.filters import command, other_filters
 from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
@@ -61,13 +70,13 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ **Welcome {message.from_user.mention} Sweet Heart How Are You!** \n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Aɢᴀʀ ᴀᴘᴋᴏ ᴠᴄ ᴘᴇʏ sᴏɴɢ ᴘʟᴀʏ ᴋᴀʀɴᴇʏ ʜᴀɪɴ ᴛᴏ ᴍᴜᴊʜᴇʏ ᴀᴘɴᴇʏ ɢʀᴏᴜᴘ ᴍᴀɪɴ ᴀᴅᴍɪɴ ʙᴀɴᴀ ᴅᴏ ᴠᴄ ʀɪɢʜᴛ ᴋᴇʏ sᴀᴛʜ ᴀᴜʀ /play ᴋɪ ᴄᴏᴍᴍᴀɴᴅ ᴅᴀʟᴀɪɴ ᴀɢᴀʀ ғɪʀ ʙʜɪ ɪssᴜ ʜᴀɪ ᴛᴏ ᴍᴇʀʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ sᴇʏ ᴄᴏɴᴛᴀᴄᴛ ᴋᴀʀᴀɪɴ 👉 @Dr_Asad_Ali!.**
+💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Aɢᴀʀ ᴀᴘᴋᴏ ᴠᴄ ᴘᴇʏ sᴏɴɢ ᴘʟᴀʏ ᴋᴀʀɴᴇʏ ʜᴀɪɴ ᴛᴏ ᴍᴜᴊʜᴇʏ ᴀᴘɴᴇʏ ɢʀᴏᴜᴘ ᴍᴀɪɴ ᴀᴅᴍɪɴ ʙᴀɴᴀ ᴅᴏ ᴠᴄ ʀɪɢʜᴛ ᴋᴇʏ sᴀᴛʜ ᴀᴜʀ /join ᴋɪ ᴄᴏᴍᴍᴀɴᴅ ᴅᴀʟᴀɪɴ ᴀɢᴀʀ ғɪʀ ʙʜɪ ɪssᴜ ʜᴀɪ ᴛᴏ ᴛʜᴇɴ ᴄᴏɴᴛᴀᴄᴛ ᴛᴏ 👉 [ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ](https://t.me/{REPO_OWNER}) ᴏʀ [ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙʀᴏ](https://t.me/{MY_BRO})**
 
  👨‍🔧 **Tʜɪs ᴡɪʟʟ ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴏɴʟʏ ᴠɪᴅᴇᴏ ᴍᴜsɪᴄ ᴏɴ ʏᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠᴄ ᴄʜᴀᴛ ɢʀᴏᴜᴘ**
 
 💡 **Find ᴏᴜᴛ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜɪs ʙᴜᴛᴛᴏɴ. ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ ᴀɴᴅ @HarshitSharma361 .👉 » 📚 Cᴏᴍᴍᴀɴᴅs Bᴜᴛᴛᴏɴ 📚 **
 
-❔ **How ᴛᴏ ᴜsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜɪs ʙᴜᴛᴛᴏɴ...👉  » ❓ Bᴀsɪᴄ Gᴜɪᴅᴇ Button!**
+❔ **How ᴛᴏ ᴜsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜɪs ʙᴜᴛᴛᴏɴ...👉  » ❓ Bᴀsɪᴄ Gᴜɪᴅᴇ Button!** 
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -118,7 +127,7 @@ async def alive(client: Client, message: Message):
         ]
     )
 
-    alive = f"**Hᴇʟʟᴏ {message.from_user.mention()}, ɪ'ᴍ {BOT_NAME}**\n\n✨ Bᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ ɴᴏʀᴍᴀʟʟʏ\ɴ🍀 Mʏ Mᴀsᴛᴇʀ: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bᴏᴛ Vᴇʀsɪᴏɴ: `v{__version__}`\n🍀 Pʏʀᴏɢʀᴀᴍ Vᴇʀsɪᴏɴ: `{pyrover}`\n✨ Pʏᴛʜᴏɴ Vᴇʀsɪᴏɴ: `{__python_version__}`\n🍀 PʏTɢCᴀʟʟs ᴠᴇʀsɪᴏɴ: `{pytover.__version__}`\n✨ Uᴘᴛɪᴍᴇ Sᴛᴀᴛᴜs: `{uptime}`\ɴ\ɴ**Tʜᴀɴᴋs ғᴏʀ Aᴅᴅɪɴɢ ᴍᴇ ʜᴇʀᴇ, ғᴏʀ ᴘʟᴀʏɪɴɢ ᴠɪᴅᴇᴏ & ᴍᴜsɪᴄ ᴏɴ ʏᴏᴜʀ Gʀᴏᴜᴘ's ᴠɪᴅᴇᴏ ᴄʜᴀᴛ** ❤"
+    alive = f"**Hᴇʟʟᴏ {message.from_user.mention()}, ɪ'ᴍ {BOT_NAME}**\n\n✨ Bᴏᴛ ɪs ᴡᴏʀᴋɪɴɢ ɴᴏʀᴍᴀʟʟʏ\n🍀 Mʏ Mᴀsᴛᴇʀ: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bᴏᴛ Vᴇʀsɪᴏɴ: `v{__version__}`\n🍀 Pʏʀᴏɢʀᴀᴍ Vᴇʀsɪᴏɴ: `{pyrover}`\n✨ Pʏᴛʜᴏɴ Vᴇʀsɪᴏɴ: `{__python_version__}`\n🍀 PʏTɢCᴀʟʟs ᴠᴇʀsɪᴏɴ: `{pytover.__version__}`\n✨ Uᴘᴛɪᴍᴇ Sᴛᴀᴛᴜs: `{uptime}`\n\n**Tʜᴀɴᴋs ғᴏʀ Aᴅᴅɪɴɢ ᴍᴇ ʜᴇʀᴇ, ғᴏʀ ᴘʟᴀʏɪɴɢ ᴠɪᴅᴇᴏ & ᴍᴜsɪᴄ ᴏɴ ʏᴏᴜʀ Gʀᴏᴜᴘ's ᴠɪᴅᴇᴏ ᴄʜᴀᴛ** ❤"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
@@ -133,14 +142,14 @@ async def ping_pong(client: Client, message: Message):
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
     await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
-
-
+    
+    
 @Client.on_message(command(["help", f"help@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("**Gᴇᴛᴛɪɴɢ ʜᴇʟᴘ ᴍᴇɴᴜ**...")
+    m_reply = await message.reply_text("**ɢᴇᴛᴛɪɴɢ ʜᴇʟᴘ ᴍᴇɴᴜ**...")
     delta_ping = time() - start
-    await m_reply.edit_text("⚡️**ᴍᴀᴋᴇ {BOT_USERNAME} ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n⚡️**ʀᴜɴ /reload ᴄᴏᴍᴍᴀɴᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n**ᴊᴏɪɴ @Shayri_Music_Lovers**\n⚡️**ʀᴜɴ /userbotjoin ᴄᴏᴍᴍᴀɴᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n**ᴛᴜʀɴᴇᴅ ᴏɴ ᴠᴄ ᴛʜᴇɴ /play sᴏɴɢ ɴᴀᴍᴇ**")
+    await m_reply.edit_text("⚡ **ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n⚡️ **ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n⚡ **ᴀғᴛᴇʀ ᴀᴅᴍɪɴ ʀᴜɴ /join ᴄᴏᴍᴍᴀɴᴅ**\n⚡ **ᴛᴜʀɴᴇᴅ ᴏɴ ᴠᴄ ᴛʜᴇɴ ʀᴜɴ /play ᴄᴏᴍᴍᴀɴᴅ ᴡɪᴛʜ sᴏɴɢ ɴᴀᴍᴇ**\n⚡ **ᴊᴏɪɴ [ʀᴏᴄᴋs sᴇʀᴠᴇʀ](https://t.me/{MY_SERVER})")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
@@ -149,7 +158,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 **ʙᴏᴛ sᴛᴀᴛᴜs**:\n"
-        f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
-        f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`"
+        "🤖 bot status:\n"
+        f"• **uptime:** `{uptime}`\n"
+        f"• **start time:** `{START_TIME_ISO}`"
     )
