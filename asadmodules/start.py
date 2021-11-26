@@ -21,7 +21,7 @@ from config import (
     GROUP_SUPPORT,
     OWNER_NAME,
     UPDATES_CHANNEL,
-    REPO_OWNER
+    REPO_OWNER,
     MY_BRO,
     MY_SERVER,
 )
