@@ -150,7 +150,7 @@ async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("**ɢᴇᴛᴛɪɴɢ ʜᴇʟᴘ ᴍᴇɴᴜ**...")
     delta_ping = time() - start
-    await m_reply.edit_text("⚡ **ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n⚡️ **ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n⚡ **ᴀғᴛᴇʀ ᴀᴅᴍɪɴ ʀᴜɴ /join ᴄᴏᴍᴍᴀɴᴅ**\n⚡ **ᴛᴜʀɴᴇᴅ ᴏɴ ᴠᴄ ᴛʜᴇɴ ʀᴜɴ /play ᴄᴏᴍᴍᴀɴᴅ ᴡɪᴛʜ sᴏɴɢ ɴᴀᴍᴇ**\n⚡ **ᴊᴏɪɴ [ʀᴏᴄᴋs sᴇʀᴠᴇʀ](https://t.me/{MY_SERVER})"
+    await m_reply.edit_text("⚡ **ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n⚡️ **ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ**\n⚡ **ᴀғᴛᴇʀ ᴀᴅᴍɪɴ ʀᴜɴ /join ᴄᴏᴍᴍᴀɴᴅ**\n⚡ **ᴛᴜʀɴᴇᴅ ᴏɴ ᴠᴄ ᴛʜᴇɴ ʀᴜɴ /play ᴄᴏᴍᴍᴀɴᴅ ᴡɪᴛʜ sᴏɴɢ ɴᴀᴍᴇ**\n⚡ **ᴊᴏɪɴ [ʀᴏᴄᴋs sᴇʀᴠᴇʀ](https://t.me/{MY_SERVER}")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
