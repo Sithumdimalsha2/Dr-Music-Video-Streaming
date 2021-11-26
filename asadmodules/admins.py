@@ -11,7 +11,7 @@ from rocksdriver.decorators import authorized_users_only
 from rocksdriver.filters import command, other_filters
 from rocksdriver.queues import QUEUE, clear_queue
 from rocksdriver.utils import skip_current_song, skip_item
-from config import BOT_USERNAME, GROUP_SUPPORT, IMG_3, UPDATES_CHANNEL, REPO_OWNER, BOT_UPDATE, MY_BRO, MY_SERVER, BOT_NAME, MY_HEART,
+from config import BOT_USERNAME, GROUP_SUPPORT, IMG_3, UPDATES_CHANNEL, REPO_OWNER, BOT_UPDATE, MY_BRO, MY_SERVER, BOT_NAME, MY_HEART
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
