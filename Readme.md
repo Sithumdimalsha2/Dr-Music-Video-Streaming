@@ -30,7 +30,7 @@ Dr Music Is A Telegram Bot Project That's Allow You To Play Music On Telegram Vo
 ## Heroku Deployment ❤️
 The easy way to host this bot, deploy to Heroku, Change the app country to Europe (it will help to make the bot stable).
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/jankarikiduniya/Dr-Music-Video-Streaming)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sithumdimalsha2/Dr-Music-Video-Streaming)
 
 ### Asad– History
 
